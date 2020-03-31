@@ -12,6 +12,7 @@
   "dependencies": {
     "acorn": "7.1.1",
     "axios": "^0.19.2",
+    "mem": "^6.0.1",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-neomorph-shadows": "0.0.5",
