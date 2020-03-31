@@ -1,0 +1,42 @@
+dependencies: \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Conv.cpp \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/Folly/Folly-prefix.pch \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Conv.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Headers/Public/DoubleConversion/double-conversion/double-conversion.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Headers/Public/DoubleConversion/double-conversion/utils.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Demangle.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/FBString.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/CppAttributes.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Portability.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/portability/Config.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/CPortability.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Traits.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/hash/Hash.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Utility.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/functional/ApplyTuple.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/functional/Invoke.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Preprocessor.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/hash/SpookyHashV1.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/hash/SpookyHashV2.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/lang/Bits.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/ConstexprMath.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/lang/Assume.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/portability/Builtins.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/lang/Exception.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/memory/Malloc.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/memory/detail/MallocImpl.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Expected.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Likely.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Optional.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Unit.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/lang/ColdClass.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/Range.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/portability/Constexpr.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/portability/String.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/CpuId.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/detail/RangeCommon.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Headers/Public/glog/glog/logging.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Headers/Public/glog/glog/log_severity.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Headers/Public/glog/glog/vlog_is_on.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/detail/RangeSse42.h \
+  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Folly/folly/portability/Math.h
