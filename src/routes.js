@@ -7,8 +7,8 @@ class routes extends Component{
         return(
             <Router>
                 <Scene key="root">
-                    <Scene key="Home" renderBackButton={()=>(null)} renderLeftButton={()=>(null)} initial title="CryptoMap" navigationBarStyle={{ backgroundColor: '#5D5B5B' }} titleStyle={{color: '#fff'}} component={Main}/>
-                    <Scene key="Card" title="Card" hideNavBar={true} component={Card}/>
+                    <Scene key="Home" hideNavBar={true} component={Main}/>
+                    <Scene key="Card" hideNavBar={true} component={Card}/>
                 </Scene>
             </Router>
         )

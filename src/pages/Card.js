@@ -8,13 +8,11 @@ import Feather from 'react-native-vector-icons/Feather';
 export default class Card extends Component {
 
 
-
-
     render() {
         return (
             <View style={styles.Container}>
                 <View style={styles.Header}>
-                    <TouchableOpacity style={styles.Header} onPress={() => { Actions.Home() }}>
+                    <TouchableOpacity style={styles.Header} onPress={()=>{Actions.pop()}}>
                         <Feather color='#fff' name='chevron-left' size={26} />
                         <Text style={styles.TextoHeader}>voltar</Text>
                     </TouchableOpacity>
@@ -37,7 +35,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.black,
     },
     Header: {
-        marginTop: 30,
+        marginTop: 20,
         marginLeft: 5,
         flexDirection: 'row',
     },

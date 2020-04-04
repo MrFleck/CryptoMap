@@ -23,27 +23,32 @@ export default class Main extends Component {
     };
 
     renderItem = ({ item }) => (
-        <TouchableOpacity onPress={() => { Actions.Card({text: item.currency, price: item.price}) }}>
-                <View style={styles.Card}>
-                    <Image style={styles.Cryptologo} source={{uri:item.logo_url}}/>
-                    <Text style={styles.CryptoName}>{item.currency}</Text>
-                    <Text style={styles.CryptoDescription}>{item.price}</Text>
-                    {console.log(item.logo_url)}  
-                </View>
+        <TouchableOpacity onPress={() => { Actions.Card({ text: item.currency, price: item.price }) }}>
+            <View style={styles.Card}>
+                <Image style={styles.Cryptologo} source={{ uri: item.logo_url }} />
+                <Text style={styles.CryptoName}>{item.currency}</Text>
+                <Text style={styles.CryptoDescription}>{item.price}</Text>
+                {console.log(item.logo_url)}
+            </View>
         </TouchableOpacity>
     )
 
     render() {
         return (
             <View style={styles.Container}>
-                <FlatList
-                    data={this.state.prices}
-                    keyExtractor={item => item.currency}
-                    renderItem={this.renderItem}
-                    horizontal={false}
-                    numColumns={2}
-                />
-            </View>         
+                <View style={{ marginTop: 35, marginLeft: 140 }}>
+                    <Text style={{ color: '#fff', fontSize: 28 }}>CryptoMap</Text>
+                </View>
+                <View style={{marginTop:5, flex:1,}}>
+                    <FlatList
+                        data={this.state.prices}
+                        keyExtractor={item => item.currency}
+                        renderItem={this.renderItem}
+                        horizontal={false}
+                        numColumns={2}
+                    />
+                </View>
+            </View>
         );
     }
 }
@@ -57,10 +62,11 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         backgroundColor: '#5D5B5B',
         shadowOpacity: 15,
-        width: 170,
+        width: 190,
         height: 120,
         justifyContent: 'space-between',
-        marginHorizontal: 8,
+        marginLeft: 10,
+        marginRight: 5,
         marginTop: 10,
         padding: 20,
     },
@@ -89,7 +95,7 @@ const styles = StyleSheet.create({
     Cryptologo: {
         width: 80,
         height: 80,
-        position:'absolute',
+        position: 'absolute',
         flex: 1,
-      },
+    },
 });
