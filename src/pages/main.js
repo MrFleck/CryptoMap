@@ -1,79 +1,60 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity, Image } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import api from '../services/api';
+import { Actions } from 'react-native-router-flux';
 
 export default class Main extends Component {
-    static navigationOptions = {
-        title: "CryptoMap"
-    };
-
     state = {
-        docs: [],
+        prices: [],
     };
 
     componentDidMount() {
-        this.loadProducts();
+        this.loadCrypto();
     }
 
-    loadProducts = async () => {
-        const response = await api.get('/products');
+    loadCrypto = async () => {
+        const response = await api.get('/currencies/ticker?key=6ddc22213a53b49c36b5f38de5af8726&ids=BTC,ETH,XPR,EOS,LTC,XLM,BCH&interval=1d&convert=BRL');
 
-        const { docs } = response.data;
+        const prices = response.data;
+        console.log(prices)
+        this.setState({ prices })
 
-        this.setState({ docs })
     };
 
     renderItem = ({ item }) => (
-        <View style={styles.AllBody, {flexDirection: 'row'}}>
-            <View style={styles.Card}>
-                <Text>{item.title}</Text>
-                <Text>{item.description}</Text>
-                <TouchableOpacity onPress={() => { }}>
-                    <Text>Acessar</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
+        <TouchableOpacity onPress={() => { Actions.Card({text: item.currency, price: item.price}) }}>
+                <View style={styles.Card}>
+                    <Image style={styles.Cryptologo} source={{uri:item.logo_url}}/>
+                    <Text style={styles.CryptoName}>{item.currency}</Text>
+                    <Text style={styles.CryptoDescription}>{item.price}</Text>
+                    {console.log(item.logo_url)}  
+                </View>
+        </TouchableOpacity>
     )
-
-
 
     render() {
         return (
-            <ScrollView style={styles.AllBody}>
-                <View style={styles.AllBody, { flexDirection: 'row' }}>
-                    <FlatList
-                        data={this.state.docs}
-                        keyExtractor={item => item._id}
-                        renderItem={this.renderItem}
-                        horizontal ={false}
-                        numColumns = {2}
-                    />
-                    {/* <View style={styles.Card}>
-                            <View>
-                                <Text style = {styles.CryptoName}>BTC</Text>
-                            </View>
-                            <View>
-                                <Text style = {styles.CryptoPrice}>Price:</Text>
-                            </View>
-                            <View style ={{flexDirection: 'row', alignItems: "center"}}>
-                                <Text style = {styles.CryptoPriceNumber}>11.873,65</Text>
-                                <Text style ={styles.CryptoPriceNumber}>4.98% </Text>
-                            </View>
-                        </View> */}
-                </View>
-            </ScrollView>
+            <View style={styles.Container}>
+                <FlatList
+                    data={this.state.prices}
+                    keyExtractor={item => item.currency}
+                    renderItem={this.renderItem}
+                    horizontal={false}
+                    numColumns={2}
+                />
+            </View>         
         );
     }
 }
 
 const styles = StyleSheet.create({
-    AllBody: {
-        backgroundColor: Colors.black,
-        display: "flex",
+    Container: {
+        flex: 1,
+        backgroundColor: '#000000'
     },
     Card: {
-        borderRadius: 13,
+        borderRadius: 8,
         backgroundColor: '#5D5B5B',
         shadowOpacity: 15,
         width: 170,
@@ -81,23 +62,34 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginHorizontal: 8,
         marginTop: 10,
+        padding: 20,
     },
     CryptoName: {
-        fontSize: 20,
-        color: Colors.black,
-        marginHorizontal: 10,
-        marginTop: 5,
+        fontSize: 16,
+        color: Colors.white,
+        backgroundColor: 'transparent'
     },
     CryptoPrice: {
         fontSize: 15,
         color: Colors.black,
         marginHorizontal: 10,
+        backgroundColor: 'transparent'
     },
     CryptoPriceNumber: {
         fontSize: 20,
         color: Colors.black,
         marginHorizontal: 10,
-        marginBottom: 10
+        marginBottom: 10,
+        backgroundColor: 'transparent'
     },
-
+    CryptoDescription: {
+        fontSize: 12,
+        color: Colors.white,
+    },
+    Cryptologo: {
+        width: 80,
+        height: 80,
+        position:'absolute',
+        flex: 1,
+      },
 });

@@ -17,6 +17,22 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* CryptoMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CryptoMapTests.m */; };
 		344D421E134C578F69A5BAA0 /* libPods-CryptoMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B88990595D24177DCC14ACB7 /* libPods-CryptoMap.a */; };
+		40F67AA8243785CB0068A2BF /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67A98243785CB0068A2BF /* Fontisto.ttf */; };
+		40F67AA9243785CB0068A2BF /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67A99243785CB0068A2BF /* Octicons.ttf */; };
+		40F67AAA243785CB0068A2BF /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67A9A243785CB0068A2BF /* Feather.ttf */; };
+		40F67AAB243785CB0068A2BF /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67A9B243785CB0068A2BF /* Entypo.ttf */; };
+		40F67AAC243785CB0068A2BF /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67A9C243785CB0068A2BF /* FontAwesome5_Brands.ttf */; };
+		40F67AAD243785CB0068A2BF /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67A9D243785CB0068A2BF /* MaterialCommunityIcons.ttf */; };
+		40F67AAE243785CB0068A2BF /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67A9E243785CB0068A2BF /* AntDesign.ttf */; };
+		40F67AAF243785CB0068A2BF /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67A9F243785CB0068A2BF /* Foundation.ttf */; };
+		40F67AB0243785CB0068A2BF /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67AA0243785CB0068A2BF /* Ionicons.ttf */; };
+		40F67AB1243785CB0068A2BF /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67AA1243785CB0068A2BF /* FontAwesome5_Solid.ttf */; };
+		40F67AB2243785CB0068A2BF /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67AA2243785CB0068A2BF /* FontAwesome5_Regular.ttf */; };
+		40F67AB3243785CB0068A2BF /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67AA3243785CB0068A2BF /* FontAwesome.ttf */; };
+		40F67AB4243785CB0068A2BF /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67AA4243785CB0068A2BF /* Zocial.ttf */; };
+		40F67AB5243785CB0068A2BF /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67AA5243785CB0068A2BF /* EvilIcons.ttf */; };
+		40F67AB6243785CB0068A2BF /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67AA6243785CB0068A2BF /* SimpleLineIcons.ttf */; };
+		40F67AB7243785CB0068A2BF /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40F67AA7243785CB0068A2BF /* MaterialIcons.ttf */; };
 		769D1DCB50E0ED583F67785F /* libPods-CryptoMap-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F08EAA8B8D731F4CD35C1668 /* libPods-CryptoMap-tvOS.a */; };
 		7BCA1745FF7D96B04CDB3DED /* libPods-CryptoMapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB879C98AA5E3A04C07FF22 /* libPods-CryptoMapTests.a */; };
 		9AAD28F7E45C96F7F5BF1C92 /* libPods-CryptoMap-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7924B4220646D19BCE5DB69 /* libPods-CryptoMap-tvOSTests.a */; };
@@ -54,6 +70,22 @@
 		2945FB8A7680D5C6B547ABD8 /* Pods-CryptoMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoMapTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoMapTests/Pods-CryptoMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* CryptoMap-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CryptoMap-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* CryptoMap-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CryptoMap-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F67A98243785CB0068A2BF /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		40F67A99243785CB0068A2BF /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		40F67A9A243785CB0068A2BF /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		40F67A9B243785CB0068A2BF /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		40F67A9C243785CB0068A2BF /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		40F67A9D243785CB0068A2BF /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		40F67A9E243785CB0068A2BF /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		40F67A9F243785CB0068A2BF /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		40F67AA0243785CB0068A2BF /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		40F67AA1243785CB0068A2BF /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		40F67AA2243785CB0068A2BF /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		40F67AA3243785CB0068A2BF /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		40F67AA4243785CB0068A2BF /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		40F67AA5243785CB0068A2BF /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		40F67AA6243785CB0068A2BF /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		40F67AA7243785CB0068A2BF /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		87082032E0C727462EF8E91E /* Pods-CryptoMap-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoMap-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoMap-tvOSTests/Pods-CryptoMap-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A287B063DD9AD87A46F5F06A /* Pods-CryptoMap-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoMap-tvOS.release.xcconfig"; path = "Target Support Files/Pods-CryptoMap-tvOS/Pods-CryptoMap-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		A7924B4220646D19BCE5DB69 /* libPods-CryptoMap-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptoMap-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +157,7 @@
 		13B07FAE1A68108700A75B9A /* CryptoMap */ = {
 			isa = PBXGroup;
 			children = (
+				40F67A97243785CB0068A2BF /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -149,6 +182,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		40F67A97243785CB0068A2BF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				40F67A98243785CB0068A2BF /* Fontisto.ttf */,
+				40F67A99243785CB0068A2BF /* Octicons.ttf */,
+				40F67A9A243785CB0068A2BF /* Feather.ttf */,
+				40F67A9B243785CB0068A2BF /* Entypo.ttf */,
+				40F67A9C243785CB0068A2BF /* FontAwesome5_Brands.ttf */,
+				40F67A9D243785CB0068A2BF /* MaterialCommunityIcons.ttf */,
+				40F67A9E243785CB0068A2BF /* AntDesign.ttf */,
+				40F67A9F243785CB0068A2BF /* Foundation.ttf */,
+				40F67AA0243785CB0068A2BF /* Ionicons.ttf */,
+				40F67AA1243785CB0068A2BF /* FontAwesome5_Solid.ttf */,
+				40F67AA2243785CB0068A2BF /* FontAwesome5_Regular.ttf */,
+				40F67AA3243785CB0068A2BF /* FontAwesome.ttf */,
+				40F67AA4243785CB0068A2BF /* Zocial.ttf */,
+				40F67AA5243785CB0068A2BF /* EvilIcons.ttf */,
+				40F67AA6243785CB0068A2BF /* SimpleLineIcons.ttf */,
+				40F67AA7243785CB0068A2BF /* MaterialIcons.ttf */,
+			);
+			name = Fonts;
+			path = "../node_modules/react-native-vector-icons/Fonts";
+			sourceTree = "<group>";
+		};
 		5B3021627949466BBB79DD24 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +218,6 @@
 				2945FB8A7680D5C6B547ABD8 /* Pods-CryptoMapTests.debug.xcconfig */,
 				AE2C997D076360069A73F6D6 /* Pods-CryptoMapTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -230,6 +286,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				357E37A1FE2D313C522466F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -290,14 +347,20 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = DNFHH87VW2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = DNFHH87VW2;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DNFHH87VW2;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DNFHH87VW2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
@@ -336,7 +399,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F67AA8243785CB0068A2BF /* Fontisto.ttf in Resources */,
+				40F67AB3243785CB0068A2BF /* FontAwesome.ttf in Resources */,
+				40F67AAF243785CB0068A2BF /* Foundation.ttf in Resources */,
+				40F67AB2243785CB0068A2BF /* FontAwesome5_Regular.ttf in Resources */,
+				40F67AB0243785CB0068A2BF /* Ionicons.ttf in Resources */,
+				40F67AB5243785CB0068A2BF /* EvilIcons.ttf in Resources */,
+				40F67AAB243785CB0068A2BF /* Entypo.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				40F67AB4243785CB0068A2BF /* Zocial.ttf in Resources */,
+				40F67AB6243785CB0068A2BF /* SimpleLineIcons.ttf in Resources */,
+				40F67AAA243785CB0068A2BF /* Feather.ttf in Resources */,
+				40F67AA9243785CB0068A2BF /* Octicons.ttf in Resources */,
+				40F67AAC243785CB0068A2BF /* FontAwesome5_Brands.ttf in Resources */,
+				40F67AAE243785CB0068A2BF /* AntDesign.ttf in Resources */,
+				40F67AB7243785CB0068A2BF /* MaterialIcons.ttf in Resources */,
+				40F67AB1243785CB0068A2BF /* FontAwesome5_Solid.ttf in Resources */,
+				40F67AAD243785CB0068A2BF /* MaterialCommunityIcons.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +509,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		357E37A1FE2D313C522466F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoMap/Pods-CryptoMap-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoMap/Pods-CryptoMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		C968959D9247FC1CE17ADEC5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -583,6 +710,7 @@
 			baseConfigurationReference = 2945FB8A7680D5C6B547ABD8 /* Pods-CryptoMapTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DNFHH87VW2;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -607,6 +735,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = DNFHH87VW2;
 				INFOPLIST_FILE = CryptoMapTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -628,6 +757,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = DNFHH87VW2;
 				INFOPLIST_FILE = CryptoMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -647,6 +777,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DNFHH87VW2;
 				INFOPLIST_FILE = CryptoMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -671,6 +802,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DNFHH87VW2;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "CryptoMap-tvOS/Info.plist";
@@ -700,6 +832,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DNFHH87VW2;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "CryptoMap-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -726,6 +859,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DNFHH87VW2;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "CryptoMap-tvOSTests/Info.plist";
@@ -754,6 +888,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DNFHH87VW2;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "CryptoMap-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

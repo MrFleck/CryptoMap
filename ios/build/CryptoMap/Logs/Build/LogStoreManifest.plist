@@ -5,6 +5,36 @@
 	<key>logFormatVersion</key>
 	<integer>9</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>B87ED29A-88B0-43FF-AB9E-77E983486E4C</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B87ED29A-88B0-43FF-AB9E-77E983486E4C.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>CryptoMap project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CryptoMap</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace CryptoMap with scheme CryptoMap and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>607571245.89242601</real>
+			<key>timeStoppedRecording</key>
+			<real>607571247.51953804</real>
+			<key>title</key>
+			<string>Building workspace CryptoMap with scheme CryptoMap and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>B87ED29A-88B0-43FF-AB9E-77E983486E4C</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
