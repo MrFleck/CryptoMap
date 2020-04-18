@@ -4,7 +4,8 @@ import { Actions } from 'react-native-router-flux';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import api from '../services/api';
 import Feather from 'react-native-vector-icons/Feather';
-
+import { scale } from '../assets/scaling'
+import { TextMask } from 'react-native-masked-text'
 export default class Card extends Component {
 
 
@@ -12,15 +13,19 @@ export default class Card extends Component {
         return (
             <View style={styles.Container}>
                 <View style={styles.Header}>
-                    <TouchableOpacity style={styles.Header} onPress={()=>{Actions.pop()}}>
+                    <TouchableOpacity style={styles.Header} onPress={() => { Actions.pop() }}>
                         <Feather color='#fff' name='chevron-left' size={26} />
                         <Text style={styles.TextoHeader}>voltar</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.Container1}>
-                    <View style={{ marginTop: 15 }}>
-                        <Text style={styles.TextoIntroducao}>Olá, você está na página do Card: {this.props.text}</Text>
-                        <Text style={styles.TextoValor}>{this.props.price}</Text>
+                    <View style={{ marginTop: scale(15) }}>
+                        <Text style={styles.TextoIntroducao}>Olá, você está na página do Card: {this.props.currency}</Text>
+                        <TextMask
+                            style= {styles.TextoValor}
+                            value={Number(this.props.price).toFixed(2)}
+                            type={'money'}
+                        />
                     </View>
                 </View>
             </View>
@@ -31,31 +36,32 @@ export default class Card extends Component {
 
 const styles = StyleSheet.create({
     Container: {
+        display: 'flex',
         flex: 1,
         backgroundColor: Colors.black,
     },
     Header: {
-        marginTop: 20,
-        marginLeft: 5,
+        marginTop: scale(25),
+        marginLeft: scale(5),
         flexDirection: 'row',
     },
     Container1: {
-        marginLeft: 30,
+        marginLeft: scale(30),
         backgroundColor: Colors.black,
     },
     TextoHeader: {
         color: '#fff',
-        fontSize: 20,
+        fontSize: scale(20),
 
     },
     TextoIntroducao: {
         color: '#fff',
-        fontSize: 16,
+        fontSize: scale(16),
     },
     TextoValor: {
-        fontSize: 30,
+        fontSize: scale(30),
         color: '#fff',
-        marginTop: 30,
+        marginTop: scale(30),
     },
 
 

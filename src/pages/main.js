@@ -3,6 +3,9 @@ import { StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity, Image }
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import api from '../services/api';
 import { Actions } from 'react-native-router-flux';
+import { scale } from '../assets/scaling'
+import Icons from 'react-native-vector-icons/FontAwesome5';
+import { TextMask } from 'react-native-masked-text'
 
 export default class Main extends Component {
     state = {
@@ -23,12 +26,17 @@ export default class Main extends Component {
     };
 
     renderItem = ({ item }) => (
-        <TouchableOpacity onPress={() => { Actions.Card({ text: item.currency, price: item.price }) }}>
+        <TouchableOpacity onPress={() => { Actions.Card(item) }}>
             <View style={styles.Card}>
-                <Image style={styles.Cryptologo} source={{ uri: item.logo_url }} />
-                <Text style={styles.CryptoName}>{item.currency}</Text>
-                <Text style={styles.CryptoDescription}>{item.price}</Text>
-                {console.log(item.logo_url)}
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Icons name={item.name.toLowerCase()} size={32} style={{ color: '#fff' }} />
+                    <Text style={styles.CryptoName}>{item.currency}</Text>
+                </View>
+                <TextMask
+                    style={styles.CryptoDescription}
+                    value={Number(item.price).toFixed(2)}
+                    type={'money'}
+                />
             </View>
         </TouchableOpacity>
     )
@@ -36,16 +44,17 @@ export default class Main extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <View style={{ marginTop: 35, marginLeft: 140 }}>
-                    <Text style={{ color: '#fff', fontSize: 28 }}>CryptoMap</Text>
+                <View style={{ marginTop: scale(35), alignItems: 'center' }}>
+                    <Text style={{ color: '#fff', fontSize: scale(28) }}>CryptoMap</Text>
                 </View>
-                <View style={{marginTop:5, flex:1,}}>
+                <View style={{ marginTop: scale(5), flex: 1, }}>
                     <FlatList
                         data={this.state.prices}
                         keyExtractor={item => item.currency}
                         renderItem={this.renderItem}
                         horizontal={false}
                         numColumns={2}
+                        style={{ flex: 1, }}
                     />
                 </View>
             </View>
@@ -55,46 +64,47 @@ export default class Main extends Component {
 
 const styles = StyleSheet.create({
     Container: {
+        display: 'flex',
         flex: 1,
         backgroundColor: '#000000'
     },
     Card: {
-        borderRadius: 8,
+        borderRadius: scale(5),
         backgroundColor: '#5D5B5B',
-        shadowOpacity: 15,
-        width: 190,
-        height: 120,
+        shadowOpacity: scale(15),
+        width: scale(160),
+        height: scale(120),
         justifyContent: 'space-between',
-        marginLeft: 10,
-        marginRight: 5,
-        marginTop: 10,
-        padding: 20,
+        marginLeft: scale(10),
+        marginRight: scale(0),
+        marginTop: scale(10),
+        padding: scale(15),
     },
     CryptoName: {
-        fontSize: 16,
+        fontSize: scale(16),
         color: Colors.white,
         backgroundColor: 'transparent'
     },
     CryptoPrice: {
-        fontSize: 15,
+        fontSize: scale(15),
         color: Colors.black,
-        marginHorizontal: 10,
+        marginHorizontal: scale(10),
         backgroundColor: 'transparent'
     },
     CryptoPriceNumber: {
-        fontSize: 20,
+        fontSize: scale(20),
         color: Colors.black,
-        marginHorizontal: 10,
-        marginBottom: 10,
+        marginHorizontal: scale(10),
+        marginBottom: scale(10),
         backgroundColor: 'transparent'
     },
     CryptoDescription: {
-        fontSize: 12,
+        fontSize: scale(16),
         color: Colors.white,
     },
     Cryptologo: {
-        width: 80,
-        height: 80,
+        width: scale(80),
+        height: scale(80),
         position: 'absolute',
         flex: 1,
     },
