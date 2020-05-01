@@ -5,7 +5,8 @@ import api from '../services/api';
 import { Actions } from 'react-native-router-flux';
 import { scale } from '../assets/scaling'
 import Icons from 'react-native-vector-icons/FontAwesome5';
-import { TextMask } from 'react-native-masked-text'
+import { TextMask } from 'react-native-masked-text';
+import { SvgUri } from 'react-native-svg';
 
 export default class Main extends Component {
     state = {
@@ -29,7 +30,12 @@ export default class Main extends Component {
         <TouchableOpacity onPress={() => { Actions.Card(item) }}>
             <View style={styles.Card}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <Icons name={item.name.toLowerCase()} size={32} style={{ color: '#fff' }} />
+                    {/* <Icons name={item.name.toLowerCase()} size={32} style={{ color: '#fff' }} /> */}
+                    <SvgUri
+                        width={40}
+                        height={40}
+                        uri={item.logo_url}
+                    />
                     <Text style={styles.CryptoName}>{item.currency}</Text>
                 </View>
                 <TextMask
