@@ -27,7 +27,7 @@ export default class Main extends Component {
     };
 
     renderItem = ({ item }) => (
-        <TouchableOpacity onPress={() => { Actions.Card(item) }}>
+        <TouchableOpacity onPress={() => { Actions.card(item) }}>
             <View style={styles.Card}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                     {/* <Icons name={item.name.toLowerCase()} size={32} style={{ color: '#fff' }} /> */}
@@ -50,8 +50,13 @@ export default class Main extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <View style={{ marginTop: scale(35), alignItems: 'center' }}>
-                    <Text style={{ color: '#fff', fontSize: scale(28) }}>CryptoMap</Text>
+                <View style={{ flexDirection: 'row', marginTop: scale(40), alignItems: 'flex-end' }}>
+                    <View style={{ marginLeft: scale(105), alignItems: 'center' }}>
+                        <Text style={{ color: '#fff', fontSize: scale(28) }}>CryptoMap</Text>
+                    </View>
+                    <TouchableOpacity onPress={() => Actions.login()}>
+                        <Icons name='user' size={23} style={{ marginLeft: scale(60), color: '#fff' }} />
+                    </TouchableOpacity>
                 </View>
                 <View style={{ marginTop: scale(5), flex: 1, }}>
                     <FlatList
