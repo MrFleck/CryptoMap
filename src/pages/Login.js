@@ -12,8 +12,12 @@ export default class Card extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <Text style={styles.TextoIntroducao}>Login</Text>
-            </View>
+                <Text style={{
+                    color: '#fff',
+                    fontSize: scale(16),
+                    marginTop: scale(10)
+                }}>Login</Text>
+            </View >
         );
     }
 }
