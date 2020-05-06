@@ -33,7 +33,6 @@ class Main extends Component {
         <TouchableOpacity onPress={() => { Actions.card(item) }}>
             <View style={styles.Card}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                    {/* <Icons name={item.name.toLowerCase()} size={32} style={{ color: '#fff' }} /> */}
                     <SvgUri
                         width={40}
                         height={40}
@@ -89,7 +88,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#000000'
     },
     Header: {
-        marginTop: Platform.OS === 'ios' ? scale(50) : scale(40),
+        marginTop: Platform.OS === 'ios' ? scale(50) : scale(25),
         flexDirection: 'row',
         alignItems: 'center',
     },
