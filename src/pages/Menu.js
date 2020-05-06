@@ -9,7 +9,7 @@ import { TextMask } from 'react-native-masked-text'
 
 
 
-class Login extends Component {
+class Menu extends Component {
 
 
     render() {
@@ -19,7 +19,7 @@ class Login extends Component {
                     color: '#fff',
                     fontSize: scale(16),
                     marginTop: scale(90)
-                }}>Login</Text>
+                }}>Menu</Text>
             </View >
         );
     }
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
         marginTop: scale(30),
     },
 
+
 });
 
-export default Login;
+export default Menu;

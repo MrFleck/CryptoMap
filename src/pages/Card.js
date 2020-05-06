@@ -6,7 +6,8 @@ import api from '../services/api';
 import Feather from 'react-native-vector-icons/Feather';
 import { scale } from '../assets/scaling'
 import { TextMask } from 'react-native-masked-text'
-export default class Card extends Component {
+
+class Card extends Component {
 
 
     render() {
@@ -66,3 +67,5 @@ const styles = StyleSheet.create({
 
 
 });
+
+export default Card;

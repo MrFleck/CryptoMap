@@ -8,22 +8,25 @@ import Icons from 'react-native-vector-icons/FontAwesome5';
 import { TextMask } from 'react-native-masked-text';
 import { SvgUri } from 'react-native-svg';
 
-export default class Main extends Component {
+
+//Components
+import Loading from '../components/Loading'
+
+class Main extends Component {
     state = {
+        loading: true,
         prices: [],
     };
 
-    componentDidMount() {
+    componentDidMount(){
         this.loadCrypto();
     }
 
     loadCrypto = async () => {
         const response = await api.get('/currencies/ticker?key=6ddc22213a53b49c36b5f38de5af8726&ids=BTC,ETH,XPR,EOS,LTC,XLM,BCH&interval=1d&convert=BRL');
-
-        const prices = response.data;
-        console.log(prices)
-        this.setState({ prices })
-
+        let price = response.data
+        console.log(price)
+        this.setState({ prices: price , loading: false})
     };
 
     renderItem = ({ item }) => (
@@ -50,24 +53,30 @@ export default class Main extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <View style={{ flexDirection: 'row', marginTop: scale(40), alignItems: 'flex-end' }}>
-                    <View style={{ marginLeft: scale(105), alignItems: 'center' }}>
-                        <Text style={{ color: '#fff', fontSize: scale(28) }}>CryptoMap</Text>
-                    </View>
-                    <TouchableOpacity onPress={() => Actions.login()}>
-                        <Icons name='user' size={23} style={{ marginLeft: scale(60), color: '#fff' }} />
-                    </TouchableOpacity>
-                </View>
-                <View style={{ marginTop: scale(5), flex: 1, }}>
-                    <FlatList
-                        data={this.state.prices}
-                        keyExtractor={item => item.currency}
-                        renderItem={this.renderItem}
-                        horizontal={false}
-                        numColumns={2}
-                        style={{ flex: 1, }}
-                    />
-                </View>
+                {this.state.loading ?
+                    <Loading mensagem='Estamos puxando os dados das suas cryptos =)'/>
+                    :
+                    <>
+                        <View style={styles.Header}>
+                            <View style={{ marginLeft: scale(105), alignItems: 'center' }}>
+                                <Text style={{ color: '#fff', fontSize: scale(28) }}>CryptoMap</Text>
+                            </View>
+                            <TouchableOpacity onPress={() => Actions.menu()}>
+                                <Icons name='bars' size={23} style={{ marginLeft: scale(60), color: '#fff' }} />
+                            </TouchableOpacity>
+                        </View>
+                        <View style={{ marginTop: scale(5), flex: 1, }}>
+                            <FlatList
+                                data={this.state.prices}
+                                keyExtractor={item => item.currency}
+                                renderItem={this.renderItem}
+                                horizontal={false}
+                                numColumns={2}
+                                style={{ flex: 1, }}
+                            />
+                        </View>
+                    </>
+                }
             </View>
         );
     }
@@ -78,6 +87,11 @@ const styles = StyleSheet.create({
         display: 'flex',
         flex: 1,
         backgroundColor: '#000000'
+    },
+    Header: {
+        marginTop: Platform.OS === 'ios' ? scale(50) : scale(40),
+        flexDirection: 'row',
+        alignItems: 'center',
     },
     Card: {
         borderRadius: scale(5),
@@ -120,3 +134,5 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 });
+
+export default Main;
