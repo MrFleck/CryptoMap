@@ -9,6 +9,10 @@ import { TextMask } from 'react-native-masked-text'
 
 class Card extends Component {
 
+    state ={
+        moeda: this.props, 
+    }
+
 
     render() {
         return (
@@ -21,10 +25,10 @@ class Card extends Component {
                 </View>
                 <View style={styles.Container1}>
                     <View style={{ marginTop: scale(15) }}>
-                        <Text style={styles.TextoIntroducao}>Olá, você está na página do Card: {this.props.currency}</Text>
+                        <Text style={styles.TextoIntroducao}>Olá, você está na página do Card: {this.state.moeda.currency}</Text>
                         <TextMask
                             style= {styles.TextoValor}
-                            value={Number(this.props.price).toFixed(2)}
+                            value={Number(this.state.moeda.price).toFixed(2)}
                             type={'money'}
                         />
                     </View>
