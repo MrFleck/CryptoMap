@@ -58,7 +58,7 @@ class Main extends Component {
                     <>
                         <View style={styles.Header}>
                             <View style={{ marginLeft: scale(105), alignItems: 'center' }}>
-                                <Text style={{ color: '#fff', fontSize: scale(28) }}>CryptoMap</Text>
+                                <Image source = {require('../assets/image/logo.png')} />
                             </View>
                             <TouchableOpacity onPress={() => Actions.menu()}>
                                 <Icons name='bars' size={23} style={{ marginLeft: scale(60), color: '#fff' }} />
