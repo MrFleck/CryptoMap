@@ -1,4 +1,4 @@
-#Sun May 03 18:28:40 BRT 2020
-base.0=/home/felipe/Projects/CryptoMap/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Wed May 06 22:18:52 BRT 2020
+base.0=C\:\\Users\\leona\\OneDrive\\Documentos\\dev\\CryptoMap\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

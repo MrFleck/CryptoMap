@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/felipe/Projects/CryptoMap/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "C:\\Users\\leona\\OneDrive\\Documentos\\dev\\CryptoMap\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/felipe/.gradle/caches/transforms-2/files-2.1/f2bb55a102e5d7051c000ae3255e9503/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "C:\\Users\\leona\\.gradle\\caches\\transforms-2\\files-2.1\\f68038caa46293dde77ba98799cdecb1\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
