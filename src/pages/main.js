@@ -60,7 +60,7 @@ class Main extends Component {
                             <View style={{ marginLeft: scale(105), alignItems: 'center' }}>
                                 <Image source = {require('../assets/image/logo.png')} />
                             </View>
-                            <TouchableOpacity onPress={() => Actions.menu()}>
+                            <TouchableOpacity onPress={() => Actions.login()}>
                                 <Icons name='bars' size={23} style={{ marginLeft: scale(60), color: '#fff' }} />
                             </TouchableOpacity>
                         </View>
