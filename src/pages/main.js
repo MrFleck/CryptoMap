@@ -23,7 +23,7 @@ class Main extends Component {
     }
 
     loadCrypto = async () => {
-        const response = await api.get('/currencies/ticker?key=6ddc22213a53b49c36b5f38de5af8726&ids=BTC,ETH,XPR,EOS,LTC,XLM,BCH&interval=1d&convert=BRL');
+        const response = await api.get('/currencies/ticker?key=6ddc22213a53b49c36b5f38de5af8726&ids=BTC,ETH,XPR,EOS,LTC,XLM&interval=1d&convert=BRL');
         let price = response.data
         console.log(price)
         this.setState({ prices: price , loading: false})
