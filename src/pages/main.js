@@ -53,7 +53,7 @@ class Main extends Component {
         return (
             <View style={styles.Container}>
                 {this.state.loading ?
-                    <Loading mensagem='Estamos puxando os dados das suas cryptos =)'/>
+                    <Loading mensagem='Estamos puxando os dados das suas cryptos ;)'/>
                     :
                     <>
                         <View style={styles.Header}>
