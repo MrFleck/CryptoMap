@@ -57,11 +57,11 @@ class Main extends Component {
                     :
                     <>
                         <View style={styles.Header}>
-                            <View style={{ marginLeft: scale(105), alignItems: 'center' }}>
+                            <View style={{ alignItems: 'center' }}>
                                 <Image source = {require('../assets/image/logo.png')} />
                             </View>
                             <TouchableOpacity onPress={() => Actions.login()}>
-                                <Icons name='bars' size={23} style={{ marginLeft: scale(60), color: '#fff' }} />
+                                <Icons name='bars' size={23} style={{ marginLeft: scale(50), color: '#fff' }} />
                             </TouchableOpacity>
                         </View>
                         <View style={{ marginTop: scale(5), flex: 1, }}>
@@ -91,6 +91,8 @@ const styles = StyleSheet.create({
         marginTop: Platform.OS === 'ios' ? scale(50) : scale(25),
         flexDirection: 'row',
         alignItems: 'center',
+        marginLeft: scale(80),
+
     },
     Card: {
         borderRadius: scale(5),
