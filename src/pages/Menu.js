@@ -6,6 +6,7 @@ import api from '../services/api';
 import Feather from 'react-native-vector-icons/Feather';
 import { scale } from '../assets/scaling'
 import { TextMask } from 'react-native-masked-text'
+import Icons from 'react-native-vector-icons/FontAwesome5';
 
 
 
@@ -15,11 +16,36 @@ class Menu extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <Text style={{
-                    color: '#fff',
-                    fontSize: scale(16),
-                    marginTop: scale(90)
-                }}>Menu</Text>
+                <View>
+                    <TouchableOpacity>
+                        <Text>Perfil</Text>
+                        <Icons/>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity>
+                        <Text></Text>
+                        <Icons/>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity>
+                        <Text></Text>
+                        <Icons/>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity>
+                        <Text></Text>
+                        <Icons/>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity>
+                        <Text></Text>
+                        <Icons/>
+                    </TouchableOpacity>
+                </View>
             </View >
         );
     }
