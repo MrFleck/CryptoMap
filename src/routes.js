@@ -6,6 +6,7 @@ import Main from './pages/main';
 import Card from './pages/Card';
 import Login from './pages/Login';
 import Menu from './pages/Menu';
+import Search from './pages/Search';
 
 class routes extends Component{
     render(){
@@ -16,6 +17,7 @@ class routes extends Component{
                     <Scene key='card' hideNavBar={true} component={Card}/>
                     <Scene key='login' hideNavBar={true} component={Login}/>
                     <Scene key='menu' hideNavBar={true} component={Menu}/>
+                    <Scene key='search' hideNavBar={true} component={Search}/>
                 </Scene>
             </Router>
         )
