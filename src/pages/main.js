@@ -60,7 +60,7 @@ class Main extends Component {
                             <View style={{ alignItems: 'center' }}>
                                 <Image source = {require('../assets/image/logo.png')} />
                             </View>
-                            <TouchableOpacity onPress={() => Actions.login()}>
+                            <TouchableOpacity onPress={() => Actions.search()}>
                                 <Icons name='bars' size={23} style={{ marginLeft: scale(50), color: '#fff' }} />
                             </TouchableOpacity>
                         </View>
