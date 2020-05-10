@@ -13,22 +13,21 @@ class Login extends Component {
 
     render() {
         return (
+                <ScrollView style={styles.Container}>
+                    <View style={{ alignItems: 'center' }}>
+                        <Image source={require('../assets/image/logo.png')} />
+                    </View>
 
-            <View style={styles.Container}>
-                <View style={{ alignItems: 'center' }}>
-                    <Image source={require('../assets/image/logo.png')} />
-                </View>
-
-                <Text style={styles.TextoHeader}>Seja bem-vindo!</Text>
-                <View style={styles.GroupLogin}>
-                    <TextInput style={styles.InputUser} placeholder="E-mail ou usuário:" />
-                    <TextInput secureTextEntry={true} style={styles.InputPass} placeholder="Senha:" />
-                    <TouchableOpacity style={styles.Button}>
-                        <Text style={styles.TextoBotao}>Entrar</Text>
-                    </TouchableOpacity>
-                    <Text style={styles.ForgotIt} onPress={() => Actions.pop()}>Esqueci minha senha</Text>
-                </View>
-            </View >
+                    <Text style={styles.TextoHeader}>Seja bem-vindo!</Text>
+                    <View style={styles.GroupLogin}>
+                        <TextInput style={styles.InputUser} placeholder="E-mail ou usuário:" />
+                        <TextInput secureTextEntry={true} style={styles.InputPass} placeholder="Senha:" />
+                        <TouchableOpacity style={styles.Button}>
+                            <Text style={styles.TextoBotao}>Entrar</Text>
+                        </TouchableOpacity>
+                        <Text style={styles.ForgotIt} onPress={() => Actions.pop()}>Esqueci minha senha</Text>
+                    </View>
+                </ScrollView >
         );
     }
 }
@@ -37,13 +36,13 @@ class Login extends Component {
 const styles = StyleSheet.create({
     Container: {
         display: 'flex',
-        alignItems: 'center',
+        // alignItems: 'center',
         flex: 1,
         backgroundColor: '#000000',
         padding: scale(50),
     },
     Header: {
-        marginTop: Platform.OS === 'ios' ? scale(35) : scale(25),
+        marginTop: Platform.OS === 'ios' ? scale(50) : scale(25),
         marginLeft: scale(5),
         flexDirection: 'row',
     },
