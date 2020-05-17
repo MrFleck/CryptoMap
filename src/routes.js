@@ -15,9 +15,9 @@ class routes extends Component{
                 <Scene key="root">
                     <Scene key='home' hideNavBar={true} component={Main}/>
                     <Scene key='card' hideNavBar={true} component={Card}/>
-                    <Scene key='login' initial={true} hideNavBar={true} component={Login}/>
+                    <Scene key='login' hideNavBar={true} component={Login}/>
                     <Scene key='menu' hideNavBar={true} component={Menu}/>
-                    <Scene key='search' hideNavBar={true} component={Search}/>
+                    <Scene key='search' initial={true} hideNavBar={true} component={Search}/>
                     <Scene key='cadastro' hideNavBar={true} component={Cadastro}/>
                 </Scene>
             </Router>
