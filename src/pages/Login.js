@@ -1,15 +1,70 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity, Image, Platform, TextInput} from 'react-native';
+import { StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity, Image, Platform, TextInput, AsyncStorage } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-import api from '../services/api';
-import Feather from 'react-native-vector-icons/Feather';
 import { scale } from '../assets/scaling'
-import { TextMask } from 'react-native-masked-text'
-import { SvgUri } from 'react-native-svg';
-
+import { LOGIN } from '../services/graphql/mutations/login'
+import { withApollo } from 'react-apollo';
 
 class Login extends Component {
+
+    state = {
+        email: '',
+        senha: '',
+        mostraErro: false,
+        mensagem: '',
+
+    }
+
+
+    sendData = () => {
+        let emailEnviar = this.state.email
+        let senhaEnviar = this.state.senha
+
+        if (emailEnviar == '' || emailEnviar.indexOf('@') == -1 || emailEnviar.indexOf('.') == -1) {
+            this.setState({ mensagem: 'você precisa preencher seu e-mail corretamente', mostraErro: true })
+        } else if (senhaEnviar == '' || senhaEnviar.length < 6) {
+            this.setState({ mensagem: 'você precisa preencher sua senha corretamente, lembre-se ela deve conter acima de 6 caractéres', mostraErro: true })
+        } else {
+            let paramsEnviar = {
+                email: emailEnviar,
+                password: senhaEnviar,
+            }
+
+            console.log('TO ENVIANDO: ', paramsEnviar)
+
+            this.props.client.mutate({ mutation: LOGIN, errorPolicy: 'all', variables: paramsEnviar }).then(results => {
+                if (results.errors) {
+                    this.setState({ mensagem: results.errors.message, mostraErro: true })
+                    console.log('ERROR: ', results.errors)
+                } else if (results.data.login == null) {
+                    this.setState({ mensagem: 'Ops...e-mail ou senha inválidos!', mostraErro: true })
+                } else {
+                    console.log('RESULT: ', results.data.login)
+                    let token = results.data.login.accessToken;
+                    console.log('--- TO PASSANDO ISSO PRA FUNCAO Q SETA NO STORAGE:', token)
+                    this.setStorage(token)
+                    this.vaiPraHome();
+                }
+            })
+        }
+    }
+
+    setStorage = async (value) => {
+        try {
+            const jsonValue = JSON.stringify(value)
+            console.log('TO INSERINDO ISSO NO ASYNCSTORAGE: ', jsonValue)
+            await AsyncStorage.setItem('accessToken', jsonValue)
+        } catch (e) {
+            console.log(e)
+        }
+
+        console.log('Done.')
+    }
+
+    vaiPraHome = () => {
+        Actions.home()
+    }
+
 
     render() {
         return (
@@ -17,11 +72,25 @@ class Login extends Component {
                 <View style={styles.Header}>
                     <Image source={require('../assets/image/logo.png')} />
                 </View>
+                {this.state.mostraErro &&
+                    <View style={{ alignItems: 'center' }}>
+                        <View style={{ width: scale(290), borderRadius: scale(10), borderWidth: scale(4), borderColor: "#ffbc01", padding: scale(15), backgroundColor: '#232324', marginTop: scale(120), zIndex: 1, position: 'absolute' }}>
+                            <View style={{ marginLeft: scale(15) }}>
+                                <Text style={{ fontWeight: 'bold', color: '#fff', fontSize: scale(14) }}>{this.state.mensagem}</Text>
+                            </View>
+                            <View style={{ alignItems: 'center', marginTop: scale(95) }}>
+                                <TouchableOpacity style={{ borderRadius: scale(10), backgroundColor: '#ffbc01', alignItems: 'center', width: scale(100) }} onPress={() => this.setState({ mostraErro: false })}>
+                                    <Text style={{ margin: scale(6), fontWeight: 'bold', fontSize: scale(14), color: '#fff' }}>Ok</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </View>
+                }
                 <View style={styles.GroupLogin}>
                     <Text style={styles.TextoBemVindo}>Seja bem-vindo!</Text>
-                    <TextInput style={styles.InputUser} placeholder="E-mail ou usuário:" />
-                    <TextInput secureTextEntry={true} style={styles.InputPass} placeholder="Senha:" />
-                    <TouchableOpacity style={styles.Button}>
+                    <TextInput style={styles.InputUser} placeholder="E-mail:" onChangeText={text => this.setState({ email: text })} value={this.state.email} />
+                    <TextInput secureTextEntry={true} style={styles.InputPass} placeholder="Senha:" onChangeText={text => this.setState({ senha: text })} value={this.state.senha} />
+                    <TouchableOpacity style={styles.Button} onPress={() => this.sendData()}>
                         <Text style={styles.TextoBotao}>Entrar</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => Actions.pop()}>
@@ -61,7 +130,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop:scale(50),
+        marginTop: scale(50),
     },
 
     InputUser: {
@@ -83,7 +152,7 @@ const styles = StyleSheet.create({
         height: scale(35),
         marginBottom: scale(30)
     },
-        
+
     Button: {
         width: scale(250),
         backgroundColor: "#ffbc01",
@@ -100,15 +169,16 @@ const styles = StyleSheet.create({
     },
 
     ForgotIt: {
-        fontSize:scale(12),
+        fontSize: scale(12),
         color: "#fff",
         textAlign: 'center',
     },
 
     CadastreSe: {
         color: "#ffbc01",
-        fontSize:scale(15),
+        fontSize: scale(15),
     },
 });
 
-export default Login;
+
+export default withApollo(Login);

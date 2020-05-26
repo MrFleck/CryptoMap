@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\leona\\OneDrive\\Documentos\\dev\\CryptoMap\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "/home/felipe/Projects/CryptoRoutes/app/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\leona\\.gradle\\caches\\transforms-2\\files-2.1\\6bc28cee462fef40c583d764d86ffd1c\\res\\values-v16\\values-v16.xml",
+                    "source": "/home/felipe/.gradle/caches/transforms-2/files-2.1/1539fa93656e70d50a4a3e8f37ec18a3/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\leona\\.gradle\\caches\\transforms-2\\files-2.1\\f68038caa46293dde77ba98799cdecb1\\res\\values-v16\\values-v16.xml",
+                    "source": "/home/felipe/.gradle/caches/transforms-2/files-2.1/f2bb55a102e5d7051c000ae3255e9503/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

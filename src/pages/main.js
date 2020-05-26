@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity, Image, AsyncStorage } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import api from '../services/api';
 import { Actions } from 'react-native-router-flux';
@@ -16,18 +16,30 @@ class Main extends Component {
     state = {
         loading: true,
         prices: [],
+        accessToken: ''
     };
 
-    componentDidMount(){
+    componentDidMount() {
         this.loadCrypto();
+        this.getFromStorage();
     }
 
     loadCrypto = async () => {
         const response = await api.get('/currencies/ticker?key=6ddc22213a53b49c36b5f38de5af8726&ids=BTC,ETH,XPR,EOS,LTC,XLM&interval=1d&convert=BRL');
         let price = response.data
         console.log(price)
-        this.setState({ prices: price , loading: false})
+        this.setState({ prices: price, loading: false })
     };
+
+    getFromStorage = async () => {
+        let token = ''
+        try {
+            token = await AsyncStorage.getItem('accessToken')
+        } catch (error) {
+            console.log(error)
+        }
+        console.log('Token na home:', token)
+    }
 
     renderItem = ({ item }) => (
         <TouchableOpacity onPress={() => { Actions.card(item) }}>
@@ -53,14 +65,14 @@ class Main extends Component {
         return (
             <View style={styles.Container}>
                 {this.state.loading ?
-                    <Loading mensagem='Estamos puxando os dados das suas cryptos ;)'/>
+                    <Loading mensagem='Estamos puxando os dados das suas cryptos ;)' />
                     :
                     <>
                         <View style={styles.Header}>
                             <View style={{ alignItems: 'center' }}>
-                                <Image source = {require('../assets/image/logo.png')} />
+                                <Image source={require('../assets/image/logo.png')} />
                             </View>
-                            <TouchableOpacity onPress={() => Actions.search()}>
+                            <TouchableOpacity onPress={() => Actions.menu()}>
                                 <Icons name='bars' size={23} style={{ marginLeft: scale(50), color: '#fff' }} />
                             </TouchableOpacity>
                         </View>

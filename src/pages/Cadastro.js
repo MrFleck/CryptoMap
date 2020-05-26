@@ -20,54 +20,37 @@ class Cadastro extends Component {
         confirmaSenha: '',
         escondeSenha: true,
         escondeConfirmaSenha: true,
-        error: false,
-        mostraMensagem: false,
+        mostraErro: false,
         mensagem: '',
     }
 
     Cadastrar = () => {
-        let nome = this.state.nome
-        let email = this.state.email
-        let senha = this.state.senha
+        let nomeEnviar = this.state.nome
+        let emailEnviar = this.state.email
+        let senhaEnviar = this.state.senha
         let confirmaSenha = this.state.confirmaSenha
 
-
-        if (nome = '' || nome.length < 3) {
-            this.setState({ error: true, mostraMensagem: true, mensagem: 'Insira um nome válido' }, function () {
-                Alert.alert(this.state.mensagem)
-            })
-        } else if (email.indexOf(".") == -1 || email.indexOf("@") == -1) {
-            this.setState({ error: true, mostraMensagem: true, mensagem: 'Insira um email válido' }, function () {
-                Alert.alert(this.state.mensagem)
-            })
-        } else if (senha != confirmaSenha) {
-            this.setState({ error: true, mostraMensagem: true, mensagem: 'As senhas não conferem' }, function () {
-                Alert.alert(this.state.mensagem)
-            })
+        console.log('nomeEnviar: ', nomeEnviar)
+        if (nomeEnviar == '' || nomeEnviar.length < 3) {
+            this.setState({ mostraErro: true, mensagem: 'Insira um nome válido' })
+        } else if (emailEnviar.indexOf(".") == -1 || emailEnviar.indexOf("@") == -1) {
+            this.setState({ mostraErro: true, mensagem: 'Insira um email válido' })
+        } else if (senhaEnviar == '' || senhaEnviar.length < 6 ) {
+            this.setState({ mostraErro: true, mensagem: 'ops, a senha precisa ter mais de 6 caractéres' })
+        } else if (senhaEnviar != confirmaSenha) {
+            this.setState({ mostraErro: true, mensagem: 'As senhas não conferem' })
         } else {
             let paramsEnviar = {
-                nome: nome,
-                email: email,
-                senha: senha,
+                nome: nomeEnviar,
+                email: emailEnviar,
+                password: senhaEnviar,
             }
-            this.props.client.mutate({ mutation: CREATE_USER, errorPolicy: 'all', variables: paramsEnviar }).then(results => {
-                console.log('RESULT', results.error)
-                console.log('RESULT', results.data)
-                this.setState({ error: false, mostraMensagem: true, mensagem: 'Cadastrado com sucesso' }, function () {
-                    Alert.alert(this.state.mensagem)
-                })
-                // if (results.errors && results.errors[0].message == 'validation') {
-                //     let erroValid = results.errors[0].extensions.validation;
-                //     for (var [key, value] of Object.entries(erroValid)) {
-                //         console.log("Erro: ", value);
-                //         this.setState({ resultadoMensagem: value, mostraResultado: true, loading: false, erro: true })
-                //     }
-                // } else if (results.data.editUser.name == nome && results.data.ema.full_name == nomeCompleto) {
-                //     this.setState({ userAcc: results.data.editUser, resultadoMensagem: 'Opa, tudo certo, seus dados foram atualizados com sucesso', mostraResultado: true, loading: false, erro: false })
-                //     this.props.setUserAccount(results.data.editUser)
-                //     //AsyncStorage.setItem('UserAccount', JSON.stringify(results.data.editUser));
 
-                // }
+            console.log('TO ENVIANDO: ', paramsEnviar)
+
+            this.props.client.mutate({ mutation: CREATE_USER, errorPolicy: 'all', variables: paramsEnviar }).then(results => {
+                console.log('RESULT', results.data)
+                this.setState({ mostraErro: true, mensagem: 'Cadastrado com sucesso' })
             })
         }
     }
@@ -78,6 +61,20 @@ class Cadastro extends Component {
                 <View style={styles.Header}>
                     <Image source={require('../assets/image/logo.png')} />
                 </View>
+                {this.state.mostraErro &&
+                    <View style={{ alignItems: 'center' }}>
+                        <View style={{ width: scale(290), borderRadius: scale(10), borderWidth: scale(4), borderColor: "#ffbc01", padding: scale(15), backgroundColor: '#232324', marginTop: scale(120), zIndex: 1, position: 'absolute' }}>
+                            <View style={{ marginLeft: scale(15) }}>
+                                <Text style={{ fontWeight: 'bold', color: '#fff', fontSize: scale(14) }}>{this.state.mensagem}</Text>
+                            </View>
+                            <View style={{ alignItems: 'center', marginTop: scale(95) }}>
+                                <TouchableOpacity style={{ borderRadius: scale(10), backgroundColor: '#ffbc01', alignItems: 'center', width: scale(100) }} onPress={() => this.setState({ mostraErro: false })}>
+                                    <Text style={{ margin: scale(6), fontWeight: 'bold', fontSize: scale(14), color: '#fff' }}>Ok</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </View>
+                }
                 <View style={styles.GroupLogin}>
                     <View style={{ marginLeft: scale(50) }}>
                         <Text style={styles.TextoInformativo}>Nome</Text>

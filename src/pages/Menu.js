@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity, Image, Platform} from 'react-native';
+import { StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity, Image, Platform, AsyncStorage } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import api from '../services/api';
@@ -16,35 +16,40 @@ class Menu extends Component {
     render() {
         return (
             <View style={styles.Container}>
-                <View>
-                    <TouchableOpacity>
-                        <Text>Perfil</Text>
-                        <Icons/>
-                    </TouchableOpacity>
+                <View style={styles.Header}>
+                    <Text style={styles.TextoHeader}>Menu</Text>
                 </View>
-                <View>
-                    <TouchableOpacity>
-                        <Text></Text>
-                        <Icons/>
-                    </TouchableOpacity>
-                </View>
-                <View>
-                    <TouchableOpacity>
-                        <Text></Text>
-                        <Icons/>
-                    </TouchableOpacity>
-                </View>
-                <View>
-                    <TouchableOpacity>
-                        <Text></Text>
-                        <Icons/>
-                    </TouchableOpacity>
-                </View>
-                <View>
-                    <TouchableOpacity>
-                        <Text></Text>
-                        <Icons/>
-                    </TouchableOpacity>
+                <View style={styles.Container1}>
+                    <View>
+                        <TouchableOpacity style={styles.Opcoes}>
+                            <Icons name="search-dollar" color="#fff" size={30} solid />
+                            <Text style={styles.TextoIntroducao}>Pesquisar</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View>
+                        <TouchableOpacity style={styles.Opcoes}>
+                            <Icons name="user" color="#fff" size={30} solid />
+                            <Text style={styles.TextoIntroducao}>Perfil</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View>
+                        <TouchableOpacity style={styles.Opcoes}>
+                            <Icons name="sticky-note" color="#fff" size={30} solid />
+                            <Text style={styles.TextoIntroducao}>Termos e Condições</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View>
+                        <TouchableOpacity style={styles.Opcoes}>
+                            <Icons name="key" color="#fff" size={30} solid />
+                            <Text style={styles.TextoIntroducao}>Alterar senha</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View>
+                        <TouchableOpacity onPress={() => { AsyncStorage.clear(); Actions.login() }} style={styles.Opcoes}>
+                            <Icons name="sign-out-alt" color="#fff" size={30} />
+                            <Text style={styles.TextoIntroducao}>Sair</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View >
         );
@@ -56,16 +61,17 @@ const styles = StyleSheet.create({
     Container: {
         display: 'flex',
         flex: 1,
-        backgroundColor: Colors.black,
+        backgroundColor: '#000',
     },
     Header: {
         marginTop: Platform.OS === 'ios' ? scale(35) : scale(25),
         marginLeft: scale(5),
-        flexDirection: 'row',
+        alignItems: 'center',
     },
     Container1: {
+        marginTop: scale(30),
         marginLeft: scale(30),
-        backgroundColor: Colors.black,
+        backgroundColor: '#000',
     },
     TextoHeader: {
         color: '#fff',
@@ -74,15 +80,14 @@ const styles = StyleSheet.create({
     },
     TextoIntroducao: {
         color: '#fff',
-        fontSize: scale(16),
+        fontSize: scale(22),
+        marginLeft: scale(10)
     },
-    TextoValor: {
-        fontSize: scale(30),
-        color: '#fff',
-        marginTop: scale(30),
-    },
-
-
+    Opcoes: {
+        marginTop: scale(40),
+        flexDirection: 'row',
+        alignItems: 'center'
+    }
 });
 
 export default Menu;
