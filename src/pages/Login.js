@@ -144,6 +144,7 @@ const styles = StyleSheet.create({
     },
 
     InputPass: {
+        color: '#000',
         width: scale(250),
         borderColor: '#ccc',
         borderWidth: scale(1),

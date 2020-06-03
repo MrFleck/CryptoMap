@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
     },
 
     Inputs: {
+        color: '#000',
         width: scale(250),
         borderColor: '#ccc',
         borderWidth: 1,
@@ -147,7 +148,7 @@ const styles = StyleSheet.create({
         height: scale(35),
         marginBottom: scale(20)
     },
-
+    
     Button: {
         marginTop: scale(10),
         width: scale(250),
