@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
     },
 
     InputUser: {
+        color: '#000',
         width: scale(250),
         borderColor: '#ccc',
         borderWidth: 1,
