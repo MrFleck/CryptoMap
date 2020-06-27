@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
     },
 
     Inputs: {
+        textDecorationColor:'#000',
         color: '#000',
         width: scale(250),
         borderColor: '#ccc',
