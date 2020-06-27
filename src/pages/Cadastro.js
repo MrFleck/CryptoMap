@@ -49,11 +49,38 @@ class Cadastro extends Component {
             console.log('TO ENVIANDO: ', paramsEnviar)
 
             this.props.client.mutate({ mutation: CREATE_USER, errorPolicy: 'all', variables: paramsEnviar }).then(results => {
-                console.log('RESULT', results.data)
-                this.setState({ mostraErro: true, mensagem: 'Cadastrado com sucesso' })
+                if (results.errors) {
+                    this.setState({ mensagem: "algo deu errado, tente novamente mais tarde...", mostraErro: true })
+                    console.log('ERROR: ', results.errors)
+                } else if (results.data.createUser == null) {
+                    this.setState({ mensagem: 'Ops...algo deu errado, tente novamente mais tarde', mostraErro: true })
+                } else {
+                    console.log('RESULT: ', results.data.createUser)
+                    let token = results.data.createUser.accessToken;
+                    console.log('--- TO PASSANDO ISSO PRA FUNCAO Q SETA NO STORAGE:', token)
+                    this.setStorage(token)
+                    this.vaiPraHome();
+                }
             })
         }
     }
+
+    setStorage = async (value) => {
+        try {
+            const jsonValue = JSON.stringify(value)
+            console.log('TO INSERINDO ISSO NO ASYNCSTORAGE: ', jsonValue)
+            await AsyncStorage.setItem('accessToken', jsonValue)
+        } catch (e) {
+            console.log(e)
+        }
+
+        console.log('Done.')
+    }
+
+    vaiPraHome = () => {
+        Actions.home()
+    }
+
 
     render() {
         return (
