@@ -16,7 +16,7 @@ class Main extends Component {
     state = {
         loading: true,
         prices: [],
-        accessToken: ''
+        accessToken: '',
     };
 
     componentDidMount() {
@@ -25,9 +25,9 @@ class Main extends Component {
     }
 
     loadCrypto = async () => {
-        const response = await api.get('/currencies/ticker?key=6ddc22213a53b49c36b5f38de5af8726&ids=BTC,ETH,XPR,EOS,LTC,XLM&interval=1d&convert=BRL');
+        const response = await api.get('/currencies/ticker?key=6ddc22213a53b49c36b5f38de5af8726&ids=BTC,ETH,EOS,XPR,LTC,XLM&interval=1d&convert=BRL');
         let price = response.data
-        console.log(price)
+        console.log("CRYPTOS: " + price)
         this.setState({ prices: price, loading: false })
     };
 
@@ -39,17 +39,26 @@ class Main extends Component {
             console.log(error)
         }
         console.log('Token na home:', token)
+        this.setState({ loading: false })
     }
 
     renderItem = ({ item }) => (
         <TouchableOpacity onPress={() => { Actions.card(item) }}>
             <View style={styles.Card}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <SvgUri
-                        width={40}
-                        height={40}
-                        uri={item.logo_url}
-                    />
+                    {console.log("EXTENSÃO DAS IMAGENS DOS LOGOS: " + item.logo_url.substr(-3))}
+                    {
+                        item.logo_url.substr(-3) === "png" ?
+                            <Image
+                                style={{ height: scale(40), width: scale(40) }}
+                                source={{ uri: item.logo_url }} />
+                            :
+                            <SvgUri
+                                width={40}
+                                height={40}
+                                uri={item.logo_url}
+                            />
+                    }
                     <Text style={styles.CryptoName}>{item.currency}</Text>
                 </View>
                 <TextMask

@@ -8,8 +8,11 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { setContext } from 'apollo-link-context';
 import { AsyncStorage } from "react-native";
 
+// URI PARA LINUX
+// const httpLink = new HttpLink({ uri: 'http://192.168.1.42:4000/api' });
 
-const httpLink = new HttpLink({ uri: 'http://192.168.1.42:4000/api' });
+//URI PARA MACOS
+const httpLink = new HttpLink({ uri: 'http://192.168.1.117:4000/api' });
 
 const getToken = async () => {
   let data = await AsyncStorage.multiGet([

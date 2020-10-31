@@ -78,19 +78,19 @@ class Cadastro extends Component {
                 <View style={styles.GroupLogin}>
                     <View style={{ marginLeft: scale(50) }}>
                         <Text style={styles.TextoInformativo}>Nome</Text>
-                        <TextInput style={styles.Inputs} onChangeText={(texto) => this.setState({ nome: texto })} placeholder="Digite seu nome" value={this.state.nome} />
+                        <TextInput style={styles.Inputs} onChangeText={(texto) => this.setState({ nome: texto })} placeholder="Digite seu nome" placeholderTextColor="#7a7a7a" value={this.state.nome} />
                         <Text style={styles.TextoInformativo}>E-mail</Text>
-                        <TextInput style={styles.Inputs} onChangeText={(texto) => this.setState({ email: texto })} placeholder="Digite seu e-mail" value={this.state.email} />
+                        <TextInput style={styles.Inputs} onChangeText={(texto) => this.setState({ email: texto })} placeholder="Digite seu e-mail" placeholderTextColor="#7a7a7a" value={this.state.email} />
                         <Text style={styles.TextoInformativo}>Senha</Text>
                         <TextInput
                             secureTextEntry={true}
                             onChangeText={(texto) => this.setState({ senha: texto })}
-                            style={styles.Inputs} placeholder="Digite sua senha:" value={this.state.senha} />
+                            style={styles.Inputs} placeholder="Digite sua senha" placeholderTextColor="#7a7a7a" value={this.state.senha} />
                         <Text style={styles.TextoInformativo}>Confirme sua senha</Text>
                         <TextInput
                             secureTextEntry={true}
                             onChangeText={(texto) => this.setState({ confirmaSenha: texto })}
-                            style={styles.Inputs} placeholder="Confirme sua senha:" value={this.state.confirmaSenha} />
+                            style={styles.Inputs} placeholder="Confirme sua senha" placeholderTextColor="#7a7a7a" value={this.state.confirmaSenha} />
                         <TouchableOpacity style={styles.Button} onPress={() => { this.Cadastrar() }}>
                             <Text style={styles.TextoBotao}>Cadastrar</Text>
                         </TouchableOpacity>

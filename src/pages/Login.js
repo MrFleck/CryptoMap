@@ -88,8 +88,8 @@ class Login extends Component {
                 }
                 <View style={styles.GroupLogin}>
                     <Text style={styles.TextoBemVindo}>Seja bem-vindo!</Text>
-                    <TextInput style={styles.InputUser} placeholder="E-mail:" onChangeText={text => this.setState({ email: text })} value={this.state.email} />
-                    <TextInput secureTextEntry={true} style={styles.InputPass} placeholder="Senha:" onChangeText={text => this.setState({ senha: text })} value={this.state.senha} />
+                    <TextInput style={styles.InputUser} placeholder="E-mail" placeholderTextColor="#7a7a7a" onChangeText={text => this.setState({ email: text })} value={this.state.email} />
+                    <TextInput secureTextEntry={true} style={styles.InputPass} placeholder="Senha" placeholderTextColor="#7a7a7a" onChangeText={text => this.setState({ senha: text })} value={this.state.senha} />
                     <TouchableOpacity style={styles.Button} onPress={() => this.sendData()}>
                         <Text style={styles.TextoBotao}>Entrar</Text>
                     </TouchableOpacity>
@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
     },
 
     InputUser: {
+        color: '#000',
         width: scale(250),
         borderColor: '#ccc',
         borderWidth: 1,
