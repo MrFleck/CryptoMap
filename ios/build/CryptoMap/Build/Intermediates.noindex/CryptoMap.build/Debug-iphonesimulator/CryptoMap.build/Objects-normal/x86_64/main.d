@@ -1,6 +1,8 @@
 dependencies: \
-  /Users/felipemingrone/Projects/CryptoMap/ios/CryptoMap/main.m \
-  /Users/felipemingrone/Projects/CryptoMap/ios/CryptoMap/AppDelegate.h \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h
+  /Users/felipe/Projects/CryptoRoutes/app/ios/CryptoMap/main.m \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/CryptoMap/AppDelegate.h \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h

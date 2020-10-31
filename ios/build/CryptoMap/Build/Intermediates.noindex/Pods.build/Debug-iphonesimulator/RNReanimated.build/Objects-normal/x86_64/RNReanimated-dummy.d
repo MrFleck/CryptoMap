@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/RNReanimated/RNReanimated-dummy.m \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/RNReanimated/RNReanimated-prefix.pch
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/RNReanimated/RNReanimated-dummy.m \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/RNReanimated/RNReanimated-prefix.pch

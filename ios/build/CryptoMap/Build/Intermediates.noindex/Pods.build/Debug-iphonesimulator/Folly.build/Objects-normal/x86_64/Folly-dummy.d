@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/Folly/Folly-dummy.m \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/Folly/Folly-prefix.pch
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/Folly/Folly-dummy.m \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/Folly/Folly-prefix.pch

@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/felipemingrone/Projects/CryptoMap/node_modules/react-native/ReactCommon/yoga/yoga/YGValue.cpp \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/Yoga/Yoga-prefix.pch \
-  /Users/felipemingrone/Projects/CryptoMap/node_modules/react-native/ReactCommon/yoga/yoga/YGValue.h \
-  /Users/felipemingrone/Projects/CryptoMap/node_modules/react-native/ReactCommon/yoga/yoga/YGEnums.h \
-  /Users/felipemingrone/Projects/CryptoMap/node_modules/react-native/ReactCommon/yoga/yoga/YGMacros.h
+  /Users/felipe/Projects/CryptoRoutes/app/node_modules/react-native/ReactCommon/yoga/yoga/YGValue.cpp \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/Yoga/Yoga-prefix.pch \
+  /Users/felipe/Projects/CryptoRoutes/app/node_modules/react-native/ReactCommon/yoga/yoga/YGValue.h \
+  /Users/felipe/Projects/CryptoRoutes/app/node_modules/react-native/ReactCommon/yoga/yoga/YGEnums.h \
+  /Users/felipe/Projects/CryptoRoutes/app/node_modules/react-native/ReactCommon/yoga/yoga/YGMacros.h

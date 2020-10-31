@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/FBReactNativeSpec/FBReactNativeSpec-dummy.m \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/FBReactNativeSpec/FBReactNativeSpec-prefix.pch
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/FBReactNativeSpec/FBReactNativeSpec-dummy.m \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/FBReactNativeSpec/FBReactNativeSpec-prefix.pch

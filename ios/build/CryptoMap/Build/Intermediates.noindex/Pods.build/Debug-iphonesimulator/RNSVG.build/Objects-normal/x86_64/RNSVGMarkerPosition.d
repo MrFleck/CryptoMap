@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/felipemingrone/Projects/CryptoMap/node_modules/react-native-svg/ios/Utils/RNSVGMarkerPosition.m \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/RNSVG/RNSVG-prefix.pch \
-  /Users/felipemingrone/Projects/CryptoMap/node_modules/react-native-svg/ios/Utils/RNSVGMarkerPosition.h
+  /Users/felipe/Projects/CryptoRoutes/app/node_modules/react-native-svg/ios/Utils/RNSVGMarkerPosition.m \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/RNSVG/RNSVG-prefix.pch \
+  /Users/felipe/Projects/CryptoRoutes/app/node_modules/react-native-svg/ios/Utils/RNSVGMarkerPosition.h

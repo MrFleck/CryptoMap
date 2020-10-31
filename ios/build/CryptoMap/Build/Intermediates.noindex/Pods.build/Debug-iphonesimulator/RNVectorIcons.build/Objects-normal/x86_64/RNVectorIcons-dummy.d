@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/RNVectorIcons/RNVectorIcons-dummy.m \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/RNVectorIcons/RNVectorIcons-prefix.pch
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/RNVectorIcons/RNVectorIcons-dummy.m \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/RNVectorIcons/RNVectorIcons-prefix.pch

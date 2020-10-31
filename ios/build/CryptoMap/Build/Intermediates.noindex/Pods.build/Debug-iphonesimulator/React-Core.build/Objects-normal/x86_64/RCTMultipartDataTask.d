@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/felipemingrone/Projects/CryptoMap/node_modules/react-native/React/Base/RCTMultipartDataTask.m \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Target\ Support\ Files/React-Core/React-Core-prefix.pch \
-  /Users/felipemingrone/Projects/CryptoMap/node_modules/react-native/React/Base/RCTMultipartDataTask.h \
-  /Users/felipemingrone/Projects/CryptoMap/ios/Pods/Headers/Private/React-Core/React/RCTMultipartStreamReader.h
+  /Users/felipe/Projects/CryptoRoutes/app/node_modules/react-native/React/Base/RCTMultipartDataTask.m \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/React-Core/React-Core-prefix.pch \
+  /Users/felipe/Projects/CryptoRoutes/app/node_modules/react-native/React/Base/RCTMultipartDataTask.h \
+  /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Headers/Private/React-Core/React/RCTMultipartStreamReader.h
