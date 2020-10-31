@@ -37,6 +37,8 @@ package-lock.json # include if you are using npm - don't use both yarn and npm
 npm-debug.log
 yarn-error.log
 yarn.lock # include if you are using yarn - don't use both npm and yarn
+npm-debug.log
+yarn-error.log
 
 # BUCK
 buck-out/
@@ -46,6 +48,11 @@ buck-out/
 # Fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use Fastlane to re-generate the
+!debug.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/
@@ -56,3 +63,12 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+*.jsbundle
+
+# CocoaPods
+/ios/Pods/
+
+env-config.js
+ios/Cappi.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ios/Cappi.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ios/app.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist

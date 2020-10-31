@@ -7,6 +7,7 @@ import { ApolloProvider } from 'react-apollo';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { setContext } from 'apollo-link-context';
 import { AsyncStorage } from "react-native";
+import { env } from '../env-config';
 
 // URI PARA LINUX
 // const httpLink = new HttpLink({ uri: 'http://192.168.1.42:4000/api' });
