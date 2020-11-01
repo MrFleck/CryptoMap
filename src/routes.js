@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Router, Stack, Scene, Actions } from 'react-native-router-flux';
-import { AsyncStorage } from 'react-native';
+import { AsyncStorage, View, Text, ActivityIndicator } from 'react-native';
 
 //Screens 
 import Main from './pages/main';
@@ -11,12 +11,22 @@ import Search from './pages/Search';
 import Cadastro from './pages/Cadastro';
 class routes extends Component {
     state = {
+        loading: true,
         token: false
     }
 
 
     componentDidMount() {
         this.getStorage()
+    }
+
+
+    renderLoading() {
+        return (
+            <View style={{ backgroundColor: '#000000' }}>
+                <ActivityIndicator color='#ffffff' />
+            </View>
+        );
     }
 
     getStorage = async () => {
@@ -27,8 +37,11 @@ class routes extends Component {
             console.log(error)
         }
         if (token) {
-            this.setState({ token: true })
+            this.setState({ token: true, loading: false })
+        } else {
+            this.setState({ loading: false })
         }
+
     }
 
 

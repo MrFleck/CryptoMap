@@ -4,6 +4,8 @@ import { Actions } from 'react-native-router-flux';
 import { scale } from '../assets/scaling'
 import { LOGIN } from '../services/graphql/mutations/login'
 import { withApollo } from 'react-apollo';
+import { ActivityIndicator } from 'react-native-paper';
+import Loading from '../components/Loading';
 
 class Login extends Component {
 
@@ -12,9 +14,12 @@ class Login extends Component {
         senha: '',
         mostraErro: false,
         mensagem: '',
-
+        loading: true
     }
 
+    componentDidMount() {
+        setTimeout(() => { this.setState({ loading: false }) }, 2000)
+    }
 
     sendData = () => {
         let emailEnviar = this.state.email
@@ -68,39 +73,42 @@ class Login extends Component {
 
     render() {
         return (
-            <ScrollView style={styles.Container}>
-                <View style={styles.Header}>
-                    <Image source={require('../assets/image/logo.png')} />
-                </View>
-                {this.state.mostraErro &&
-                    <View style={{ alignItems: 'center' }}>
-                        <View style={{ width: scale(290), borderRadius: scale(10), borderWidth: scale(4), borderColor: "#ffbc01", padding: scale(15), backgroundColor: '#232324', marginTop: scale(120), zIndex: 1, position: 'absolute' }}>
-                            <View style={{ marginLeft: scale(15) }}>
-                                <Text style={{ fontWeight: 'bold', color: '#fff', fontSize: scale(14) }}>{this.state.mensagem}</Text>
-                            </View>
-                            <View style={{ alignItems: 'center', marginTop: scale(95) }}>
-                                <TouchableOpacity style={{ borderRadius: scale(10), backgroundColor: '#ffbc01', alignItems: 'center', width: scale(100) }} onPress={() => this.setState({ mostraErro: false })}>
-                                    <Text style={{ margin: scale(6), fontWeight: 'bold', fontSize: scale(14), color: '#fff' }}>Ok</Text>
-                                </TouchableOpacity>
+            this.state.loading ?
+                <Loading />
+                :
+                <ScrollView style={styles.Container}>
+                    <View style={styles.Header}>
+                        <Image source={require('../assets/image/logo.png')} />
+                    </View>
+                    {this.state.mostraErro &&
+                        <View style={{ alignItems: 'center' }}>
+                            <View style={{ width: scale(290), borderRadius: scale(10), borderWidth: scale(4), borderColor: "#ffbc01", padding: scale(15), backgroundColor: '#232324', marginTop: scale(120), zIndex: 5, position: 'absolute' }}>
+                                <View style={{ marginLeft: scale(15) }}>
+                                    <Text style={{ fontWeight: 'bold', color: '#fff', fontSize: scale(14) }}>{this.state.mensagem}</Text>
+                                </View>
+                                <View style={{ alignItems: 'center', marginTop: scale(95) }}>
+                                    <TouchableOpacity style={{ borderRadius: scale(10), backgroundColor: '#ffbc01', alignItems: 'center', width: scale(100) }} onPress={() => this.setState({ mostraErro: false })}>
+                                        <Text style={{ margin: scale(6), fontWeight: 'bold', fontSize: scale(14), color: '#fff' }}>Ok</Text>
+                                    </TouchableOpacity>
+                                </View>
                             </View>
                         </View>
+                    }
+                    <View style={styles.GroupLogin}>
+                        <Text style={styles.TextoBemVindo}>Seja bem-vindo!</Text>
+                        <TextInput style={styles.InputUser} placeholder="E-mail" placeholderTextColor="#7a7a7a" onChangeText={text => this.setState({ email: text })} value={this.state.email} />
+                        <TextInput secureTextEntry={true} style={styles.InputPass} placeholder="Senha" placeholderTextColor="#7a7a7a" onChangeText={text => this.setState({ senha: text })} value={this.state.senha} />
+                        <TouchableOpacity style={styles.Button} onPress={() => this.sendData()}>
+                            <Text style={styles.TextoBotao}>Entrar</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => Actions.pop()}>
+                            <Text style={styles.ForgotIt}>Esqueci minha senha</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{ marginTop: scale(60) }} onPress={() => Actions.cadastro()}>
+                            <Text style={styles.CadastreSe}>Quero me cadastrar!</Text>
+                        </TouchableOpacity>
                     </View>
-                }
-                <View style={styles.GroupLogin}>
-                    <Text style={styles.TextoBemVindo}>Seja bem-vindo!</Text>
-                    <TextInput style={styles.InputUser} placeholder="E-mail" placeholderTextColor="#7a7a7a" onChangeText={text => this.setState({ email: text })} value={this.state.email} />
-                    <TextInput secureTextEntry={true} style={styles.InputPass} placeholder="Senha" placeholderTextColor="#7a7a7a" onChangeText={text => this.setState({ senha: text })} value={this.state.senha} />
-                    <TouchableOpacity style={styles.Button} onPress={() => this.sendData()}>
-                        <Text style={styles.TextoBotao}>Entrar</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => Actions.pop()}>
-                        <Text style={styles.ForgotIt}>Esqueci minha senha</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={{ marginTop: scale(60) }} onPress={() => Actions.cadastro()}>
-                        <Text style={styles.CadastreSe}>Quero me cadastrar!</Text>
-                    </TouchableOpacity>
-                </View>
-            </ScrollView >
+                </ScrollView >
         );
     }
 }
@@ -131,6 +139,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         marginTop: scale(50),
+        zIndex: 0,
+        position: 'relative',
     },
 
     InputUser: {

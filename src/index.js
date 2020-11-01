@@ -12,7 +12,7 @@ import { AsyncStorage } from "react-native";
 // const httpLink = new HttpLink({ uri: 'http://192.168.1.42:4000/api' });
 
 //URI PARA MACOS
-const httpLink = new HttpLink({ uri: 'http://localhost:4000/api' });
+const httpLink = new HttpLink({ uri: 'http://192.168.1.12:4000/api' });
 
 const getToken = async () => {
   let data = await AsyncStorage.multiGet([

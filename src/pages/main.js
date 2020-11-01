@@ -25,7 +25,7 @@ class Main extends Component {
     }
 
     loadCrypto = async () => {
-        const response = await api.get('/currencies/ticker?key=6ddc22213a53b49c36b5f38de5af8726&ids=BTC,ETH,EOS,XPR,LTC,XLM&interval=1d&convert=BRL');
+        const response = await api.get('/currencies/ticker?key=6ddc22213a53b49c36b5f38de5af8726&ids=BTC,ETH,EOS,XPR,LTC,XLM,USDT,XEM,LTC,BCH,XMR,EOS,DAI,KNC,DASH,ETC,BUSD,BNB&interval=1d&convert=BRL');
         let price = response.data
         console.log("CRYPTOS: " + price)
         this.setState({ prices: price, loading: false })
@@ -39,19 +39,23 @@ class Main extends Component {
             console.log(error)
         }
         console.log('Token na home:', token)
-        this.setState({ loading: false })
     }
 
     renderItem = ({ item }) => (
         <TouchableOpacity onPress={() => { Actions.card(item) }}>
             <View style={styles.Card}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                    {console.log("EXTENSÃO DAS IMAGENS DOS LOGOS: " + item.logo_url.substr(-3))}
+                    {console.log("--------------------------------------------------------------")}
+                    {console.log("NOME DA CRYPTO: " + item.currency)}
+                    {console.log("URL DO LOGO: " + item.logo_url)}
+                    {console.log("EXTENSÃO DO LOGO:" + item.logo_url.substr(-3))}
+                    {console.log("--------------------------------------------------------------")}
                     {
                         item.logo_url.substr(-3) === "png" ?
                             <Image
-                                style={{ height: scale(40), width: scale(40) }}
-                                source={{ uri: item.logo_url }} />
+                                style={{ height: scale(40), width: scale(40), resizeMode: 'contain' }}
+                                source={{ uri: item.logo_url }}
+                            />
                             :
                             <SvgUri
                                 width={40}
@@ -74,7 +78,7 @@ class Main extends Component {
         return (
             <View style={styles.Container}>
                 {this.state.loading ?
-                    <Loading mensagem='Estamos puxando os dados das suas cryptos ;)' />
+                    <Loading />
                     :
                     <>
                         <View style={styles.Header}>
@@ -85,7 +89,7 @@ class Main extends Component {
                                 <Icons name='bars' size={23} style={{ marginLeft: scale(50), color: '#fff' }} />
                             </TouchableOpacity>
                         </View>
-                        <View style={{ marginTop: scale(5), flex: 1, }}>
+                        <View style={{ marginTop: scale(5), flex: 1, marginBottom: scale(15) }}>
                             <FlatList
                                 data={this.state.prices}
                                 keyExtractor={item => item.currency}

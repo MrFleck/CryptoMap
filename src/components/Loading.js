@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, AsyncStorage } from 'react-native';
+import { ActivityIndicator } from 'react-native-paper';
 import { scale } from '../assets/scaling';
 
 const loading = require("../assets/image/loading.gif");
@@ -8,14 +9,12 @@ class Loading extends Component {
 
 
     state = {
-        mensagem: this.props.mensagem
     }
 
     render() {
         return (
             <View style={styles.container}>
-                <Image source={loading} />
-                <Text style={styles.texto}>{this.state.mensagem}</Text>
+                <ActivityIndicator size='large' color='#FFFFFF' />
             </View>
         );
     }

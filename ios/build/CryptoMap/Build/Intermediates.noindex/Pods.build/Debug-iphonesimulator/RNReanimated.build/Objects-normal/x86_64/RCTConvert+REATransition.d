@@ -1,6 +1,8 @@
 dependencies: \
   /Users/felipe/Projects/CryptoRoutes/app/node_modules/react-native-reanimated/ios/Transitioning/RCTConvert+REATransition.m \
   /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Target\ Support\ Files/RNReanimated/RNReanimated-prefix.pch \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.1.sdk/usr/include/mach-o/dyld.modulemap \
   /Users/felipe/Projects/CryptoRoutes/app/node_modules/react-native-reanimated/ios/Transitioning/RCTConvert+REATransition.h \
   /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
   /Users/felipe/Projects/CryptoRoutes/app/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
